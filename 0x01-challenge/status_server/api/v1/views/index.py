@@ -2,9 +2,7 @@
 """ Index view
 """
 from flask import jsonify
-
-from api.v1.views import app_views
-
+from api.v1.views import app_views  # Removed the circular import
 
 @app_views.route('/api/v1/status', methods=['GET'], strict_slashes=False)
 def status():
